@@ -1,4 +1,16 @@
 package com.weg.Atividade_Crud.Dto.Resposta;
 
-public class AssentoResposta {
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.List;
+
+@Getter
+@Setter
+public class AssentoRespostaDto {
+
+    private Long id;
+    private String nome;
+    private String codigoAssento;
+    private List<String> projetos;
 }

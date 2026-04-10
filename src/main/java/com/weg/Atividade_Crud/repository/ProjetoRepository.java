@@ -1,4 +1,7 @@
 package com.weg.Atividade_Crud.repository;
 
-public class ProjetoRepository {
+import com.weg.Atividade_Crud.model.Projeto;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ProjetoRepository extends JpaRepository<Projeto, Long> {
 }
