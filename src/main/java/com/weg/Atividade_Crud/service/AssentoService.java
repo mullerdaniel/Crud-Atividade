@@ -27,8 +27,8 @@ public class AssentoService {
         Assento assento = new Assento();
         assento.setCodigo(assento.getCodigo());
 
-        if(dto.getAssentoId() != null) {
-            Funcionario funcionario = funcionarioRepository.findById(dto.getAssentoId()).orElseThrow();
+        if(dto.getCodigoAssento() != null) {
+            Funcionario funcionario = funcionarioRepository.findById(Long.valueOf(dto.getCodigoAssento())).orElseThrow();
             assento.setFuncionario(funcionario);
         }
 

@@ -28,7 +28,6 @@ public class ProjetoService {
 
         if (projetoRespostaDto.getFuncionarios() != null) {
             List<Funcionario> funcionarios = funcionarioRepo.findAllById(projetoRespostaDto.getFuncionarios());
-            projeto.setFuncionarios(funcionarios);
         }
 
         return ProjetoMapper.toDto(repository.save(projeto));
