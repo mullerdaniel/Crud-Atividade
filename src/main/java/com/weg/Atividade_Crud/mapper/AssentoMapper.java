@@ -1,31 +1,20 @@
 package com.weg.Atividade_Crud.mapper;
 
-import com.weg.Atividade_Crud.Dto.Resposta.FuncionarioRespostaDto;
-import com.weg.Atividade_Crud.model.Funcionario;
-
-import java.util.stream.Collectors;
+import com.weg.Atividade_Crud.Dto.Resposta.AssentoRespostaDto;
+import com.weg.Atividade_Crud.model.Assento;
 
 public class AssentoMapper {
 
-    public static FuncionarioRespostaDto toDto(Funcionario funcionario) {
-        FuncionarioRespostaDto dto = new FuncionarioRespostaDto();
+    public static AssentoRespostaDto toDto(Assento assento) {
+        AssentoRespostaDto dto = new AssentoRespostaDto();
 
-        dto.setId(funcionario.getId());
-        dto.setNome(funcionario.getNome());
+        dto.setId(assento.getId());
+        dto.setCodigoAssento(assento.getCodigo());
 
-        if(funcionario.getAssento() != null) {
-            dto.setCodigoAssento(funcionario.getAssento().getCodigo());
+        if(assento.getFuncionario() != null) {
+            dto.setNome(assento.getFuncionario().getNome());
         }
 
-
-        dto.setProjetos(
-                funcionario.getProjetos()
-                        .stream()
-                        .map(p -> p.getNome())
-                        .collect(Collectors.toList())
-        );
-
         return dto;
-
     }
 }
