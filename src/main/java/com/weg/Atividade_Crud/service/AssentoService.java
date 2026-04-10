@@ -1,6 +1,5 @@
 package com.weg.Atividade_Crud.service;
 
-import com.weg.Atividade_Crud.Dto.Requisicao.AssentoRequisicaoDto;
 import com.weg.Atividade_Crud.Dto.Resposta.AssentoRespostaDto;
 import com.weg.Atividade_Crud.mapper.AssentoMapper;
 import com.weg.Atividade_Crud.model.Assento;
@@ -24,7 +23,7 @@ public class AssentoService {
     }
 
 
-    public AssentoRespostaDto criar(AssentoRequisicaoDto dto) {
+    public AssentoRespostaDto criar(AssentoRespostaDto dto) {
         Assento assento = new Assento();
         assento.setCodigo(assento.getCodigo());
 
